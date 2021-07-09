@@ -22,11 +22,13 @@
 </head>
 
 <body>
+    <div id="loading1"></div>
+    <div id="loading2"></div>
+    <div id="bg"></div>
     <div id="app">
-        <div id="bg"></div>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container-fluid px-4">
-                <a class="navbar-brand mb-0 h1 text-green fw-bolder" href="#competition">WINGS OF PIANO</a>
+                <a class="navbar-brand mb-0 h1 text-green fw-bolder" href="#">WINGS OF PIANO</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,12 +41,10 @@
                         <li class="nav-item"><a class="nav-link" href="#repertoire">{{ $t("repertoire") }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="#bosendorfer">{{ $t("bosendorfer") }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="#previous">{{ $t("previous") }}</a></li>
-                        <li class="nav-item"><a class="nav-link" target="_blank" href="https://app.box.com/s/0ji2n0ylyc17qx8fl11nabji7ca1lt1p">{{ $t("download") }}</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" target="_blank" href="https://app.box.com/s/0ji2n0ylyc17qx8fl11nabji7ca1lt1p">{{ $t("download") }}</a></li>
                     </ul>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white-50 p-0 mb-3 mb-lg-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Language
-                    </a>
+                        <a class="nav-link dropdown-toggle text-white-50 p-0 mb-3 mb-lg-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" id="zh">中文</a></li>
                             <li><a class="dropdown-item" id="en">English</a></li>
@@ -136,7 +136,7 @@
                         <li>{{ $t("application4") }}</li>
                     </ul>
                 </div>
-                <div>
+                <div class="mb-4">
                     <h5>2. {{ $t("application5") }}</h5>
                     <ul>
                         <li>{{ $t("application6") }}
@@ -156,7 +156,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mt-4"><a target="_blank" href="https://forms.gle/1kFjcfxw935pwdS68" class="btn btn-primary">{{ $t("apply") }}</a></div>
+                <p><a target="_blank" href="https://forms.gle/1kFjcfxw935pwdS68" class="btn btn-primary">{{ $t("apply") }}</a></p>
             </div>
             <div class="row bg-transparent mx-0 mt-5 px-3 py-4">
                 <h4 id="prize">{{ $t("prize") }}</h4>
@@ -355,33 +355,33 @@
             </div>
             <div class="row bg-transparent mx-0 mt-5 px-3 py-4">
                 <h4 id="previous">{{ $t("previous") }}</h4>
-                <div class="row">
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs843-eUmdKLteZxLW_FbD_X3h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                <div class="d-flex flex-column">
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs843-eUmdKLteZxLW_FbD_X3h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841s7hKdlL72Ntei_JG9TTr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841s7hKdlL72Ntei_JG9TTr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs840oHlYANSnpwBg_Hq5e2cos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs840oHlYANSnpwBg_Hq5e2cos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs8429y5U-JLnib0iyIYjFe_77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs8429y5U-JLnib0iyIYjFe_77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841TB-zXoY-1k83NJ74kPUrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841TB-zXoY-1k83NJ74kPUrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841H8Ar3J5nw_Lf82osDfdxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs841H8Ar3J5nw_Lf82osDfdxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col embed-responsive embed-responsive-16by9">
-                        <iframe class="d-block mx-auto my-3 embed-responsive-item" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs840QsxuPMf5ViG8hpQo6w9So" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <div class="videoWrapper">
+                        <iframe class="" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLVKLEX0hs840QsxuPMf5ViG8hpQo6w9So" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                 </div>

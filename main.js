@@ -51,7 +51,7 @@ const messages = {
         application13: '影片不得冒名頂替。',
         application14: '同一組別不得重複上傳。',
         ytdescription: '2021 琴之翼V.K克國際音樂大賽 https://www.wingsofpiano.com',
-        apply: '點我報名',
+        apply: '線上報名',
         prize1: '評審及評分標準',
         prize2: '比賽評審',
         prize3: '由主辦單位聘請知名鋼琴演奏家及流行音樂業界工作者共同擔任評審。',
@@ -247,6 +247,7 @@ document.querySelector('#en').addEventListener('click', function() {
 })
 
 var navbar = document.querySelector('.navbar')
+var navbarCollapsed = true;
 
 function updateNav() {
     var scrollTop = document.scrollingElement.scrollTop;
@@ -256,11 +257,53 @@ function updateNav() {
         navbar.style.backgroundColor = "rgba(33, 37, 41, 1)";
     }
 }
-(function() {
+
+const bsCollapse = new bootstrap.Collapse(document.getElementById('navbarSupportedContent'), {
+    toggle: false
+});
+
+function toggleNavbar() {
+    if (navbarCollapsed) {
+        navbar.style.backgroundColor = "rgba(33, 37, 41, 1)";
+    } else {
+        updateNav();
+    }
+}
+document.querySelectorAll('.navbar-nav a').forEach(function(e) {
+    e.addEventListener('click', function() {
+        bsCollapse.hide();
+        navbarCollapsed = true;
+    })
+});
+document.querySelectorAll('.nav-item a.dropdown-item').forEach(function(e) {
+    e.addEventListener('click', function() {
+        bsCollapse.hide();
+        navbarCollapsed = true;
+    })
+});
+document.querySelector('.navbar-brand').addEventListener('click', function() {
+    bsCollapse.hide();
+    navbarCollapsed = true;
+})
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    toggleNavbar();
+    navbarCollapsed = !navbarCollapsed;
+})
+
+window.addEventListener('load', function() {
     updateNav();
-})();
+    document.querySelector('#loading1').style.opacity = 0;
+    document.querySelector('#loading2').style.opacity = 0;
+    setTimeout(function() {
+        document.querySelector('#loading1').style.zIndex = -1;
+        document.querySelector('#loading2').style.zIndex = -1;
+    }, 500);
+})
+
 document.querySelector('body').onscroll = function() {
     // var scrollTop = document.scrollingElement.scrollTop;
     // document.querySelector('#bg').style.backgroundPositionY = "-" + scrollTop * 0.5 + "px";
-    updateNav();
+    if (navbarCollapsed) {
+        updateNav();
+    }
 }
