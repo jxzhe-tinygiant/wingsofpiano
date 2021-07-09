@@ -30,20 +30,23 @@
     transition: opacity .5s linear;
 }
 
-.webp #bg {
+#bg {
     position: fixed;
     /* transform: translate3d(0, 0, 0); */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    filter: blur(1rem);
+    /* filter: blur(1rem);
     -webkit-filter: blur(1rem);
     -moz-filter: blur(1rem);
     -o-filter: blur(1rem);
-    -ms-filter: blur(1rem);
+    -ms-filter: blur(1rem); */
     z-index: -1;
-    background: url(img/bgsmall.webp);
+}
+
+.webp #bg {
+    background: url(img/bgsmall4.webp);
     background-repeat: repeat-y;
     background-position-x: center;
     background-position-y: top;
@@ -52,19 +55,7 @@
 }
 
 .no-webp #bg {
-    position: fixed;
-    /* transform: translate3d(0, 0, 0); */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    filter: blur(1rem);
-    -webkit-filter: blur(1rem);
-    -moz-filter: blur(1rem);
-    -o-filter: blur(1rem);
-    -ms-filter: blur(1rem);
-    z-index: -1;
-    background: url(img/bgsmall.jpg);
+    background: url(img/bgsmall4.jpg);
     background-repeat: repeat-y;
     background-position-x: center;
     background-position-y: top;
@@ -79,7 +70,7 @@ body {
 }
 
 picture * {
-    box-shadow: .25rem .25rem 5rem #00000099
+    box-shadow: 1rem 1rem 10rem #000000;
 }
 
 .text-green {
@@ -93,7 +84,7 @@ picture * {
 }
 
 .bg-transparent {
-    background-color: #000000AA !important;
+    background-color: #000000BB !important;
 }
 
 .navbar {

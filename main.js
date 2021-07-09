@@ -301,8 +301,8 @@ window.addEventListener('load', function() {
 })
 
 document.querySelector('body').onscroll = function() {
-    // var scrollTop = document.scrollingElement.scrollTop;
-    // document.querySelector('#bg').style.backgroundPositionY = "-" + scrollTop * 0.5 + "px";
+    var scrollTop = document.scrollingElement.scrollTop;
+    document.querySelector('#bg').style.backgroundPositionY = "-" + scrollTop * 0.25 + "px";
     if (navbarCollapsed) {
         updateNav();
     }
